@@ -96,6 +96,7 @@ export default class Example extends React.Component {
               onResume={() => console.log('Resumed')}
               onStop={() => console.log('Stopped')}
               onFinishedPlaying={() => this.setState({ playStatus: Sound.status.STOPPED })}
+              muted={true}
             />
           ) : (
             <Sound
@@ -112,6 +113,7 @@ export default class Example extends React.Component {
               onResume={() => console.log('Resumed')}
               onStop={() => console.log('Stopped')}
               onFinishedPlaying={() => this.setState({ playStatus: Sound.status.STOPPED })}
+              muted={true}
             />
           )
         )}
