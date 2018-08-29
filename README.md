@@ -17,6 +17,7 @@ render() {
       onLoading={this.handleSongLoading}
       onPlaying={this.handleSongPlaying}
       onFinishedPlaying={this.handleSongFinishedPlaying}
+      muted={true}
     />
   );
 }
@@ -38,11 +39,11 @@ Yes! It's really easy to use sounds in your app as part of the component tree in
 
 ```js
 var React = require('react');
-var Sound = require('react-sound').default;
+var Sound = require('react-sound-frank').default;
 
 // ... or using import:
 import React from 'react';
-import Sound from 'react-sound';
+import Sound from 'react-sound-frank';
 
 class MyComponentWithSound extends React.Component {
   render() {
@@ -72,6 +73,7 @@ class MyComponentWithSound extends React.Component {
 * *onStop (function)*: Function that gets called while the sound playback is stopped. It receives an object with properties `position` and `duration`.
 * *onFinishedPlaying (function)*: Function that gets called when the sound finishes playing (reached end of sound). It receives no parameters.
 * *onBufferChange (function)*: Function that gets called when the sound buffering status changes. It receives a single boolean representing the buffer state.
+* *muted (boolean)*: If the sound muted.
 
 ## How to contribute
 
